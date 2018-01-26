@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">快计划</string>
+    <string name="planet_prompt">请选择分类</string>
+</resources>

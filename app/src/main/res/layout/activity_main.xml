@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100px">
+
+    </FrameLayout>
+
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bottom"
+            android:gravity="bottom"
+            android:paddingBottom="8px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/tab_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tab_home_img"
+                    android:layout_width="36px"
+                    android:layout_height="40px"
+                    android:src="@drawable/tab_home" />
+
+                <TextView
+                    android:id="@+id/tab_home_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8px"
+                    android:text="首页"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/tab_integral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tab_integral_img"
+                    android:layout_width="36px"
+                    android:layout_height="40px"
+                    android:src="@drawable/tab_shop" />
+
+                <TextView
+                    android:id="@+id/tab_integral_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8px"
+                    android:text="商城"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/tab_cart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tab_cart_img"
+                    android:layout_width="36px"
+                    android:layout_height="40px"
+                    android:src="@drawable/tab_order" />
+
+                <TextView
+                    android:id="@+id/tab_cart_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8px"
+                    android:text="订单"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/tab_mine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tab_mine_img"
+                    android:layout_width="36px"
+                    android:layout_height="40px"
+                    android:src="@drawable/tab_mine" />
+
+                <TextView
+                    android:id="@+id/tab_mine_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8px"
+                    android:text="我的"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/activity_main_appointment"
+            android:layout_width="110px"
+            android:layout_height="110px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40px"
+            android:layout_marginLeft="6px"
+            android:background="@drawable/circle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxEms="2"
+                android:paddingLeft="4px"
+                android:singleLine="false"
+                android:text="预约洗衣"
+                android:textColor="#ff5500"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoFrameLayout>
+</com.zhy.autolayout.AutoRelativeLayout>
+

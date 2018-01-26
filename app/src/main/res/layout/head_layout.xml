@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/them">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/head_layout_left"
+            android:layout_width="100px"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/title_img"
+                android:layout_width="16px"
+                android:layout_height="32px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="38px"
+                android:src="@drawable/icon_return" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/head_layout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <Button
+            android:id="@+id/head_layout_right"
+            android:layout_width="wrap_content"
+            android:layout_height="42px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22px"
+            android:background="@drawable/head_layout_button_bg"
+            android:padding="5px"
+            android:textColor="@color/white"
+            android:textSize="22px"
+            android:visibility="gone" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

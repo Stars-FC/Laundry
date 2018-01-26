@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/head_activity_shop_add_shop_banner"
+        android:layout_width="match_parent"
+        android:layout_height="262px"
+        android:scaleType="fitXY" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38px"
+                android:layout_marginTop="10px">
+
+                <View
+                    android:layout_width="5px"
+                    android:layout_height="24px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/them" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="商品单价:"
+                    android:textColor="@color/default_text"
+                    android:textSize="28px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="354px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6px">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/default_text" />
+
+                    <EditText
+                        android:id="@+id/head_activity_shop_add_shop_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="numberDecimal" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38px"
+                android:layout_marginTop="10px">
+
+                <View
+                    android:layout_width="5px"
+                    android:layout_height="24px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/them" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="商品规格:"
+                    android:textColor="@color/default_text"
+                    android:textSize="28px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="354px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6px">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/default_text" />
+
+                    <EditText
+                        android:id="@+id/head_activity_shop_add_shop_guige"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38px"
+                android:layout_marginTop="10px">
+
+                <View
+                    android:layout_width="5px"
+                    android:layout_height="24px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/them" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="商品尺寸:"
+                    android:textColor="@color/default_text"
+                    android:textSize="28px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="354px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6px">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/default_text" />
+
+                    <EditText
+                        android:id="@+id/head_activity_shop_add_shop_chicun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38px"
+                android:layout_marginTop="10px">
+
+                <View
+                    android:layout_width="5px"
+                    android:layout_height="24px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/them" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="商品单位:"
+                    android:textColor="@color/default_text"
+                    android:textSize="28px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="354px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6px">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/default_text" />
+
+                    <EditText
+                        android:id="@+id/head_activity_shop_add_shop_danwei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38px"
+                android:layout_marginTop="10px">
+
+                <View
+                    android:layout_width="5px"
+                    android:layout_height="24px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/them" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="商品名称:"
+                    android:textColor="@color/default_text"
+                    android:textSize="28px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="354px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6px">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/default_text" />
+
+                    <EditText
+                        android:id="@+id/head_activity_shop_add_shop_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38px"
+                android:layout_marginTop="10px">
+
+                <View
+                    android:layout_width="5px"
+                    android:layout_height="24px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/them" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10px"
+                    android:text="商品介绍:"
+                    android:textColor="@color/default_text"
+                    android:textSize="28px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="354px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6px">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/default_text" />
+
+                    <EditText
+                        android:id="@+id/head_activity_shop_add_shop_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

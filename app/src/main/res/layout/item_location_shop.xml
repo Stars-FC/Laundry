@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/item_location_shop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="78px"
+        android:layout_marginLeft="28px"
+        android:layout_marginRight="28px">
+
+        <TextView
+            android:id="@+id/item_location_shop_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="米面粮油"
+            android:textColor="@color/default_text"
+            android:textSize="26px" />
+
+        <View
+            android:id="@+id/item_location_shop_view"
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/them"
+            android:visibility="gone" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

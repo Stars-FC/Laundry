@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="94px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/item_appointment_wash_confirm_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24px"
+            android:text="类型名称"
+            android:textColor="@color/default_text"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/item_appointment_wash_confirm_order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22px"
+            android:text="￥299"
+            android:textColor="@color/default_text"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/item_appointment_wash_confirm_order_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="100px"
+            android:text="X 25"
+            android:textColor="@color/default_text"
+            android:textSize="26px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="22px"
+        android:layout_marginRight="22px"
+        android:background="@color/border" />
+</com.zhy.autolayout.AutoLinearLayout>

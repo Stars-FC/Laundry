@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/item_fragment_order_list_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14px"
+            android:layout_marginTop="10px"
+            android:text="下单时间:2017-02-20 12:12:32"
+            android:textColor="@color/them"
+            android:textSize="22px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="96px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="22px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/item_fragment_order_list_check"
+                android:layout_width="27px"
+                android:layout_height="20px"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_checkbox_contact"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/item_fragment_order_list_img"
+                android:layout_width="96px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_fragment_order_list_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类型名称"
+                    android:textColor="@color/default_text"
+                    android:textSize="26px" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单价"
+                        android:textColor="@color/default_text"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/item_fragment_order_list_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24px"
+                        android:text="￥20"
+                        android:textColor="@color/default_text"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12px"
+                        android:text="/"
+                        android:textColor="@color/default_text"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12px"
+                        android:text="数量"
+                        android:textColor="@color/default_text"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/item_fragment_order_list_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24px"
+                        android:text="12"
+                        android:textColor="@color/default_text"
+                        android:textSize="24px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18px"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/item_fragment_order_list_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待支付"
+                android:textColor="@color/them"
+                android:textSize="26px" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/item_fragment_order_list_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:text="￥50"
+                    android:textColor="@color/them"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border" />
+</com.zhy.autolayout.AutoLinearLayout>

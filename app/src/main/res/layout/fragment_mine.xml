@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_user"
+        android:layout_width="match_parent"
+        android:layout_height="144px">
+
+        <com.wingfac.laundry.weight.CircleImageView
+            android:id="@+id/fragment_mine_icon"
+            android:layout_width="96px"
+            android:layout_height="96px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22px"
+            android:src="@drawable/default_icon" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14px"
+            android:layout_toRightOf="@id/fragment_mine_icon"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户名称:"
+                    android:textColor="@color/gray_text"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/fragment_mine_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三"
+                    android:textColor="@color/gray_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话:"
+                    android:textColor="@color/gray_text"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/fragment_mine_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13674282512"
+                    android:textColor="@color/gray_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_vip"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@drawable/icon_vip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="会员卡"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_cart"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@drawable/icon_cart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="购物车"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_address"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@drawable/icon_address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="收货地址"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@drawable/icon_complaint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="投诉建议"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_call_me"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@drawable/phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="联系我们"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_out"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@drawable/icon_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="退出当前帐号"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+</com.zhy.autolayout.AutoLinearLayout>

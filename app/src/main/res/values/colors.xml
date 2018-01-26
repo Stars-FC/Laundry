@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#209bf1</color>
+
+    <color name="white">#ffffff</color>
+    <color name="qwhite">#70ffffff</color>
+    <color name="them">#209bf1</color>
+    <color name="qthem">#199ff9</color>
+    <color name="border">#eeeeee</color>
+    <color name="gray_text">#656565</color>
+
+    <color name="default_text">#666666</color>
+    <color name="black">#000000</color>
+    <color name="dot">#bbbbbb</color>
+    <color name="search_text">#858585</color>
+</resources>

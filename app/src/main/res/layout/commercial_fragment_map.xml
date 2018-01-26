@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/head_layout" />
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="90px" />
+
+
+        <Button
+            android:id="@+id/fragment_navigation_location"
+            android:layout_width="63px"
+            android:layout_height="63px"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="66px"
+            android:layout_marginLeft="13px"
+            android:background="@drawable/shade_map" />
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="78px"
+            android:layout_marginLeft="22px"
+            android:background="@drawable/button_fixedposition" />
+    </com.zhy.autolayout.AutoFrameLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

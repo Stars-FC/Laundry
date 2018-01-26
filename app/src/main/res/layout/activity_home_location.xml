@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/them">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/head_layout_left"
+            android:layout_width="100px"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/title_img"
+                android:layout_width="16px"
+                android:layout_height="32px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="38px"
+                android:src="@drawable/icon_return" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="346px"
+            android:layout_height="50px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/white_layout"
+            android:padding="2px">
+
+            <Button
+                android:id="@+id/fragment_order_wash_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/left_button_select"
+                android:text="附近洗衣柜"
+                android:textColor="@color/them"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/fragment_order_shopping_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_button"
+                android:text="附近店铺"
+                android:textColor="@color/white"
+                android:textSize="30px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.wingfac.laundry.weight.NoScrollViewPager
+        android:id="@+id/activity_home_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.zhy.autolayout.AutoLinearLayout>

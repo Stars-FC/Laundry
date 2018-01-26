@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_navigation_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/them">
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <Spinner
+                android:id="@+id/activity_home_enclosed_rock_deformation_spinner1"
+                style="@style/spnner_divider_style"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:popupBackground="@android:color/transparent"
+                android:prompt="@string/planet_prompt"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/commercial_fragment_shop_tx"
+                android:layout_width="150px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/them"
+                android:text="请选择分类"
+                android:textColor="@color/search_text"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoFrameLayout>
+
+        <Button
+            android:id="@+id/head_layout_right"
+            android:layout_width="wrap_content"
+            android:layout_height="42px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22px"
+            android:background="@drawable/head_layout_button_bg"
+            android:padding="5px"
+            android:text="添加"
+            android:textColor="@color/white"
+            android:textSize="22px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        android:id="@+id/commercial_fragment_shop_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="1px"
+        android:layout_marginBottom="102px"
+        android:numColumns="2" />
+    <!--<com.cjj.MaterialRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/refresh"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#ffffff"-->
+    <!--app:isLoadMore="true"-->
+    <!--app:overlay="true"-->
+    <!--app:progress_colors="@array/material_colors"-->
+    <!--app:progress_size_type="normal"-->
+    <!--app:wave_color="#90ffffff"-->
+    <!--app:wave_height_type="normal"-->
+    <!--app:wave_show="false">-->
+
+    <!--<com.wingfac.laundry.support.SupportRecyclerView-->
+    <!--android:id="@+id/recyclerview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <!--<include layout="@layout/layout_common_empty_view" />-->
+
+
+    <!--</com.cjj.MaterialRefreshLayout>-->
+</com.zhy.autolayout.AutoLinearLayout>

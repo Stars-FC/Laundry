@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="182px"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/item_fragment_home_img"
+            android:layout_width="140px"
+            android:layout_height="140px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14px"
+            android:src="@drawable/erro_store" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="168px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_fragment_home_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="店铺名称"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/item_fragment_home_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="商品描述:"
+                android:textColor="@color/default_text"
+                android:textSize="22px" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="好评"
+                    android:textColor="@color/default_text"
+                    android:textSize="22px" />
+
+                <TextView
+                    android:id="@+id/item_fragment_home_good_reputation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:text="+235"
+                    android:textColor="@color/them"
+                    android:textSize="22px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="@color/default_text"
+                    android:textSize="22px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="人气"
+                    android:textColor="@color/default_text"
+                    android:textSize="22px" />
+
+                <TextView
+                    android:id="@+id/item_fragment_home_popularity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:text="+235"
+                    android:textColor="@color/them"
+                    android:textSize="22px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否配送:"
+                    android:textColor="@color/default_text"
+                    android:textSize="22px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:layout_marginRight="114px"
+                    android:background="@drawable/sex_shape">
+
+                    <TextView
+                        android:id="@+id/item_fragment_home_distribution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="是"
+                        android:textColor="@color/them"
+                        android:textSize="22px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="56px"
+            android:text="详情"
+            android:textColor="#8b8b8b"
+            android:textSize="20px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border" />
+</com.zhy.autolayout.AutoLinearLayout>

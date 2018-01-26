@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66px">
+
+        <TextView
+            android:id="@+id/fragment_location_shop_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="当前位置:XXXXXXXXXXXXX"
+            android:textColor="@color/them"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/fragment_location_shop_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </HorizontalScrollView>
+
+    <GridView
+        android:id="@+id/fragment_location_shop_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/border"
+        android:numColumns="4"
+        android:paddingBottom="18px"
+        android:paddingTop="18px"
+        android:scrollbars="none"
+        android:verticalSpacing="16px" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/fragment_location_shop_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_shop_bottom"
+        android:layout_below="@+id/fragment_shop_top"
+        android:divider="#00000000" />
+</com.zhy.autolayout.AutoLinearLayout>

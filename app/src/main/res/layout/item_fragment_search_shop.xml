@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="155px"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/item_cart_img"
+            android:layout_width="128px"
+            android:layout_height="106px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="88px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="164px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_cart_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="榨汁机"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/item_fragment_search_shop_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 当前距离"
+                    android:textColor="@color/them"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                android:id="@+id/item_cart_nature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:text="描述 xxxx"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+
+
+            <TextView
+                android:id="@+id/item_cart_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="价格 ¥299"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26px"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/item_cart_buy"
+                android:layout_width="62px"
+                android:layout_height="62px"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/circular_button"
+                android:clickable="false"
+                android:focusable="false"
+                android:padding="5px"
+                android:text="立即购买"
+                android:textColor="@color/white"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/item_cart_add_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:text="加入购物车"
+                android:textColor="@color/them"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/border" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/fragment_home_order_shopping_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/fragment_home_order_shopping_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="全部"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+
+            <View
+                android:id="@+id/fragment_home_order_shopping_one_view"
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/them" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/fragment_home_order_shopping_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/fragment_home_order_shopping_two_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="待支付"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+
+            <View
+                android:id="@+id/fragment_home_order_shopping_two_view"
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/them" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/fragment_home_order_shopping_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/fragment_home_order_shopping_three_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="待发货"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+
+            <View
+                android:id="@+id/fragment_home_order_shopping_three_view"
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/them" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/fragment_home_order_shopping_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/fragment_home_order_shopping_four_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已发货"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+
+            <View
+                android:id="@+id/fragment_home_order_shopping_four_view"
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/them" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/fragment_home_order_shopping_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/fragment_home_order_shopping_five_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="待评价"
+                android:textColor="@color/default_text"
+                android:textSize="24px" />
+
+            <View
+                android:id="@+id/fragment_home_order_shopping_five_view"
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/them" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/border" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_home_order_shopping_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.zhy.autolayout.AutoLinearLayout>

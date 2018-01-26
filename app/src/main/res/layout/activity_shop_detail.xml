@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/head_layout" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="88px"
+        android:scrollbars="none">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_commodity_details_banner"
+                android:layout_width="match_parent"
+                android:layout_height="320px"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="116px">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="68px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18px">
+
+                    <TextView
+                        android:id="@+id/activity_commodity_details_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品名称: XXX"
+                        android:textColor="@color/default_text"
+                        android:textSize="26px" />
+
+                    <TextView
+                        android:id="@+id/activity_commodity_details_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="商品单价: ￥123.00"
+                        android:textColor="@color/them"
+                        android:textSize="26px" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32px"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/activity_commodity_details_subtract"
+                            android:layout_width="42px"
+                            android:layout_height="47px"
+                            android:background="@color/them"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+
+                        <Button
+                            android:id="@+id/activity_commodity_details_num"
+                            android:layout_width="42px"
+                            android:layout_height="47px"
+                            android:background="@drawable/num_button"
+                            android:text="1"
+                            android:textColor="@color/them"
+                            android:textSize="24px" />
+
+                        <Button
+                            android:id="@+id/activity_commodity_details_add"
+                            android:layout_width="42px"
+                            android:layout_height="47px"
+                            android:background="@color/them"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="26px"
+                    android:layout_height="26px"
+                    android:layout_marginLeft="22px"
+                    android:src="@drawable/record" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="商品介绍"
+                    android:textColor="@color/default_text"
+                    android:textSize="26px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/border" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/activity_commodity_details_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:layout_marginRight="50px"
+                    android:layout_marginTop="20px"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+
+                <ListView
+                    android:id="@+id/multiImagView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_commodity_details_details"
+                    android:layout_marginBottom="108px"
+                    android:layout_marginLeft="50px"
+                    android:layout_marginRight="50px"
+                    android:layout_marginTop="10px"
+                    android:divider="#00000000"
+                    android:dividerHeight="0dp" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/activity_commodity_details_add_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/qthem"
+            android:text="加入购物车"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/activity_commodity_details_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/them"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

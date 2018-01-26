@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_diamonds"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="17px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22px"
+        android:layout_marginLeft="12px"
+        android:layout_marginTop="27px"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_recharge_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="26px"
+            android:text="充值金额："
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/tv_recharge_status"
+            android:layout_width="wrap_content"
+            android:layout_height="26px"
+            android:layout_below="@+id/tv_recharge_amount"
+            android:layout_marginTop="18px"
+            android:text="充值状态："
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="26px"
+            android:layout_marginLeft="18px"
+            android:layout_toRightOf="@+id/tv_recharge_amount"
+            android:text="523.00"
+            android:textColor="#209bf1"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="26px"
+            android:layout_below="@+id/tv_amount"
+            android:layout_marginLeft="18px"
+            android:layout_marginTop="18px"
+            android:layout_toRightOf="@+id/tv_recharge_status"
+            android:text="成功"
+            android:textSize="25px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="140px"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22px"
+        android:layout_marginRight="17px"
+        android:layout_marginTop="27px">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="140px"
+            android:layout_height="27px"
+            android:gravity="right"
+            android:text="2017-05-12"
+            android:textColor="#209bf1"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/btn_delete"
+            android:layout_width="112px"
+            android:layout_height="36px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_date"
+            android:layout_marginTop="18px"
+            android:background="@drawable/shape_list_item_recharge_history_button"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#209bf1"
+            android:textSize="18px" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

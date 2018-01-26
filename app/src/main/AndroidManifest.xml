@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wingfac.laundry">
+    <permission
+        android:name="com.wingfac.laundry.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.wingfac.laundry.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.InitActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShoppingOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WashOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AppointmentWashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AppointmentWashConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShopNextActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShopListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CommodityDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.StoreDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShopHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShopOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HomeMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HomeLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WashListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DeliveryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchResultShopActivtiy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineComplaintSuggestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineRechargeHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ForgetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineRechargeNextActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineRechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineRechargePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddressAlterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MainMerchantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CommercialActivityMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CommercialAcitivityStoreHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CommercialAddShopActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.ImagePagerActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ec44ee5eb19df402c48d67ccb57b5b41" />
+        <service android:name="com.amap.api.location.APSService" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <meta-data
+            android:name="design_width"
+            android:value="640" />
+        <meta-data
+            android:name="design_height"
+            android:value="1136" />
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_MESSAGE_RECEIVED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.wingfac.laundrydevice" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.wingfac.laundry" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="586324011c65ac87541e18f5" />
+    </application>
+
+</manifest>

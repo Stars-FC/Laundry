@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="114px"
+        android:descendantFocusability="blocksDescendants">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="34px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18px"
+            android:src="@drawable/icon_trumpet" />
+
+        <TextView
+            android:id="@+id/item_home_message_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="170px"
+            android:text="好消息!"
+            android:textColor="@color/default_text"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/item_home_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16px"
+            android:layout_marginTop="26px"
+            android:text="2017-05-12"
+            android:textColor="@color/them"
+            android:textSize="22px" />
+
+        <Button
+            android:id="@+id/item_home_message_delete"
+            android:layout_width="112px"
+            android:layout_height="36px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="22px"
+            android:layout_marginRight="16px"
+            android:background="@drawable/circular_button_border"
+            android:focusable="false"
+            android:text="删除"
+            android:textColor="@color/them"
+            android:textSize="18px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border" />
+</com.zhy.autolayout.AutoLinearLayout>

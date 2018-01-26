@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_navigation_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76px"
+        android:layout_marginTop="90px"
+        android:background="@color/border">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/commercial_fragment_order_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="--请选择日期--"
+                android:textColor="@color/default_text"
+                android:textColorHint="@color/default_text"
+                android:textSize="20px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/commercial_fragment_order_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="--请选择日期--"
+                android:textColor="@color/default_text"
+                android:textColorHint="@color/default_text"
+                android:textSize="20px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/commercial_fragment_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="102px"
+        android:layout_marginTop="166px" />
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/item_shop_search_root"
+        android:layout_width="wrap_content"
+        android:layout_height="48px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20px"
+        android:background="@drawable/shop_search_circlr"
+        android:paddingBottom="12px"
+        android:paddingTop="12px">
+
+        <TextView
+            android:id="@+id/item_search_history_text"
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44px"
+            android:layout_marginRight="44px"
+            android:gravity="center"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:textColor="#858585"
+            android:textSize="22px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

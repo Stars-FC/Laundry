@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/them">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="316px"
+            android:layout_height="50px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/white_layout"
+            android:padding="2px">
+
+            <Button
+                android:id="@+id/fragment_order_wash_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/left_button_select"
+                android:text="洗衣订单"
+                android:textColor="@color/them"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/fragment_order_shopping_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_button"
+                android:text="购物订单"
+                android:textColor="@color/white"
+                android:textSize="30px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <ImageView
+            android:id="@+id/fragment_order_delete"
+            android:layout_width="34px"
+            android:layout_height="34px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:src="@drawable/delete_icon" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.wingfac.laundry.weight.NoScrollViewPager
+        android:id="@+id/fragment_order_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/cv_vip"
+        android:layout_width="match_parent"
+        android:layout_height="382px"
+        android:layout_below="@+id/rl_title"
+        android:layout_margin="0px"
+        android:background="@color/border">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="510px"
+            android:layout_height="322px"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/vip_card" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额"
+                android:textColor="@color/black"
+                android:textSize="50px" />
+
+            <TextView
+                android:id="@+id/activity_mine_vip_yue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60px"
+                android:text="562"
+                android:textColor="@color/white"
+                android:textSize="78px" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_care_number"
+        android:layout_width="match_parent"
+        android:layout_height="65px"
+        android:layout_below="@+id/cv_vip">
+
+        <ImageView
+            android:id="@+id/iv_card_number"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31px"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_card_number" />
+
+        <TextView
+            android:id="@+id/activity_mine_vip_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13px"
+            android:layout_toRightOf="@+id/iv_card_number"
+            android:gravity="center_vertical"
+            android:textSize="26px" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="598px"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_care_number"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+
+    <RelativeLayout
+        android:id="@+id/rl_grade"
+        android:layout_width="match_parent"
+        android:layout_height="65px"
+        android:layout_below="@+id/view1">
+
+        <ImageView
+            android:id="@+id/iv_grade"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31px"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_grade" />
+
+        <TextView
+            android:id="@+id/activity_mine_vip_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13px"
+            android:layout_toRightOf="@+id/iv_grade"
+            android:gravity="center_vertical"
+            android:textSize="26px" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="598px"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_grade"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+
+    <RelativeLayout
+        android:id="@+id/rl_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="65px"
+        android:layout_below="@+id/view2">
+
+        <ImageView
+            android:id="@+id/iv_start_time"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31px"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_start_time" />
+
+        <TextView
+            android:id="@+id/activity_mine_vip_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13px"
+            android:layout_toRightOf="@+id/iv_start_time"
+            android:gravity="center_vertical"
+            android:textSize="26px" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="7px"
+        android:layout_below="@+id/rl_start_time"
+        android:background="#eeeeee" />
+
+    <RelativeLayout
+        android:id="@+id/rl_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="67px"
+        android:layout_below="@+id/view3">
+
+        <ImageView
+            android:id="@+id/iv_recharge"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31px"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_recharge" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13px"
+            android:layout_toRightOf="@+id/iv_recharge"
+            android:gravity="center_vertical"
+            android:text="充值"
+            android:textSize="26px" />
+
+        <ImageButton
+            android:layout_width="15px"
+            android:layout_height="30px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23px"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="598px"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_recharge"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+
+    <RelativeLayout
+        android:id="@+id/rl_recharge_history"
+        android:layout_width="match_parent"
+        android:layout_height="67px"
+        android:layout_below="@+id/view4">
+
+        <ImageView
+            android:id="@+id/iv_recharge_history"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31px"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_recharge_history" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13px"
+            android:layout_toRightOf="@+id/iv_recharge_history"
+            android:gravity="center_vertical"
+            android:text="充值历史"
+            android:textSize="26px" />
+
+        <ImageButton
+            android:layout_width="15px"
+            android:layout_height="30px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23px"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="598px"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_recharge_history"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+
+    <RelativeLayout
+        android:id="@+id/rl_payment_password"
+        android:layout_width="match_parent"
+        android:layout_height="67px"
+        android:layout_below="@+id/view5">
+
+        <ImageView
+            android:id="@+id/iv_payment_password"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31px"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_payment_password" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13px"
+            android:layout_toRightOf="@+id/iv_payment_password"
+            android:gravity="center_vertical"
+            android:text="支付密码"
+            android:textSize="26px" />
+
+        <ImageButton
+            android:layout_width="15px"
+            android:layout_height="30px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23px"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="598px"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_payment_password"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+
+    <RelativeLayout
+        android:id="@+id/rl_consumption_list"
+        android:layout_width="match_parent"
+        android:layout_height="67px"
+        android:layout_below="@+id/view6">
+
+        <ImageView
+            android:id="@+id/iv_consumption_list"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31px"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_consumption_list" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13px"
+            android:layout_toRightOf="@+id/iv_consumption_list"
+            android:gravity="center_vertical"
+            android:text="消费清单"
+            android:textSize="26px" />
+
+        <ImageButton
+            android:layout_width="15px"
+            android:layout_height="30px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23px"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="598px"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_consumption_list"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <ScrollView
+        android:id="@+id/activity_appointment_wash_confirm_order_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="58px">
+
+                <ImageView
+                    android:layout_width="22px"
+                    android:layout_height="24px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="22px"
+                    android:src="@drawable/details_order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="56px"
+                    android:text="订单号"
+                    android:textColor="@color/them"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/activity_appointment_wash_confirm_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="22px"
+                    android:textColor="@color/them"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <ListView
+                android:id="@+id/activity_appointment_wash_confirm_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:scrollbars="none" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26px"
+                    android:textColor="@color/them"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/activity_appointment_wash_confirm_order_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14px"
+                    android:text="￥36.00"
+                    android:textColor="@color/them"
+                    android:textSize="26px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66px"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_marginLeft="16px"
+                    android:src="@drawable/pen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="我要留言"
+                    android:textColor="@color/them"
+                    android:textSize="26px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="138px">
+
+                <EditText
+                    android:id="@+id/activity_appointment_wash_confirm_order_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="14px"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请输入留言内容"
+                    android:textColor="@color/default_text"
+                    android:textColorHighlight="@color/gray_text"
+                    android:textSize="24px" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <Button
+                android:id="@+id/activity_appointment_wash_confirm_order_send"
+                android:layout_width="214px"
+                android:layout_height="44px"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="100px"
+                android:background="@drawable/circular_button"
+                android:text="留言"
+                android:textSize="24px"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/activity_appointment_wash_confirm_order_pay"
+                android:layout_width="214px"
+                android:layout_height="44px"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="200px"
+                android:background="@drawable/circular_button"
+                android:text="付款"
+                android:textSize="24px"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:background="@color/white" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </ScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

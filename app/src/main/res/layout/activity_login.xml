@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2f2fc">
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="238px"
+        android:layout_marginTop="260px"
+        android:text="登录"
+        android:textColor="#209bf1"
+        android:textSize="79px" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_background"
+        android:layout_width="450px"
+        android:layout_height="140px"
+        android:layout_below="@+id/tv_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95px"
+        android:background="@drawable/shape_rl_background">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="69px"
+            android:layout_marginBottom="2px"
+            android:layout_toRightOf="@+id/iv_name"
+            android:background="#ffffff"
+            android:hint="用户名"
+            android:textColorHint="#209bf1"
+            android:textSize="23px" />
+
+        <ImageView
+            android:id="@+id/iv_name"
+            android:layout_width="70px"
+            android:layout_height="69px"
+            android:background="#ffffff"
+            android:padding="24px"
+            android:src="@drawable/wode" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="69px"
+            android:layout_below="@+id/et_name"
+            android:layout_toRightOf="@+id/iv_password"
+            android:background="#ffffff"
+            android:gravity="left|center"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:textColorHint="#209bf1"
+            android:textSize="23px" />
+
+        <ImageView
+            android:id="@+id/iv_password"
+            android:layout_width="70px"
+            android:layout_height="69px"
+            android:layout_below="@+id/iv_name"
+            android:layout_marginTop="2px"
+            android:background="#ffffff"
+            android:padding="24px"
+            android:src="@drawable/mima" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rl_background"
+        android:layout_below="@+id/rl_background"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px"
+        android:background="@null"
+        android:gravity="left|center"
+        android:text="忘记密码？"
+        android:textColor="#209bf1"
+        android:textSize="23px" />
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/rl_background"
+        android:layout_below="@+id/rl_background"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px"
+        android:background="@null"
+        android:gravity="right|center"
+        android:text="注册！"
+        android:textColor="#209bf1"
+        android:textSize="23px" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="450px"
+        android:layout_height="69px"
+        android:layout_below="@+id/btn_prompt"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_button"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="30px" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

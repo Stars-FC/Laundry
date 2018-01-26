@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="326px"
+            android:layout_height="56px"
+            android:background="@drawable/top_circular"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/windows_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单"
+                android:textColor="@color/white"
+                android:textSize="22px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="324px"
+            android:layout_height="230px"
+            android:background="@drawable/bottom_circular"
+            android:gravity="center">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="260px"
+                android:layout_height="126px"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/windows_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您已下单成功，请耐心等待!"
+                    android:textColor="@color/default_text"
+                    android:textSize="20px" />
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <Button
+                        android:id="@+id/windows_addirm"
+                        android:layout_width="82px"
+                        android:layout_height="36px"
+                        android:background="@drawable/circular_button"
+                        android:text="确定"
+                        android:textColor="@color/white"
+                        android:textSize="22px" />
+
+                    <Button
+                        android:id="@+id/windows_cancel"
+                        android:layout_width="82px"
+                        android:layout_height="36px"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/circular_button_border"
+                        android:text="取消"
+                        android:textColor="@color/them"
+                        android:textSize="22px" />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

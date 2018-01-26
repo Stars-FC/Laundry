@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/fragment_shop_top"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@color/them"
+        android:gravity="center_vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/head_activity_search_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/title_img"
+                android:layout_width="16px"
+                android:layout_height="32px"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_return"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/head_activity_search_content"
+            android:layout_width="0dp"
+            android:layout_height="42px"
+            android:layout_weight="8"
+            android:background="@drawable/circular_button_border_white"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="请输入您想搜索的商品"
+                android:textColorHint="@color/qwhite"
+                android:textSize="24px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/head_activity_search_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="28px"
+                android:src="@drawable/icon_search" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/fragment_shop_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_shop_bottom"
+        android:layout_below="@+id/fragment_shop_top"
+        android:divider="#00000000" />
+</com.zhy.autolayout.AutoRelativeLayout>

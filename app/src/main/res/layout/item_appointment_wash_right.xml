@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="112px"
+        android:background="@color/white">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/item_appointment_wash_right_img"
+                android:layout_width="82px"
+                android:layout_height="82px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="92px"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36px">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/item_appointment_wash_right_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="T桖/短袖"
+                        android:textColor="@color/default_text"
+                        android:textSize="22px" />
+
+                    <TextView
+                        android:id="@+id/item_appointment_wash_right_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16px"
+                        android:textColor="@color/them"
+                        android:textSize="22px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/item_appointemt_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="好评"
+                        android:textColor="@color/default_text"
+                        android:textSize="20px" />
+
+                    <TextView
+                        android:id="@+id/item_activity_shop_list_good"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:text="+235"
+                        android:textColor="@color/them"
+                        android:textSize="20px" />
+
+                    <TextView
+
+                        android:id="@+id/two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/default_text"
+                        android:textSize="20px" />
+
+                    <TextView
+                        android:id="@+id/three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16px"
+                        android:text="人气"
+                        android:textColor="@color/default_text"
+                        android:textSize="20px" />
+
+                    <TextView
+                        android:id="@+id/item_activity_shop_list_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:text="+235"
+                        android:textColor="@color/them"
+                        android:textSize="20px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/item_appointemt_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是否配送:"
+                        android:textColor="@color/default_text"
+                        android:textSize="20px" />
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="30px"
+                        android:layout_height="30px"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12px"
+                        android:layout_marginRight="112px"
+                        android:background="@drawable/sex_shape">
+
+                        <TextView
+                            android:id="@+id/item_fragment_home_distribution"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="是"
+                            android:textColor="@color/them"
+                            android:textSize="20px" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12px"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/item_appointment_wash_right_subtract"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:src="@drawable/jian"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item_appointment_wash_right_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:textColor="@color/default_text"
+                    android:textSize="22px"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/item_appointment_wash_right_add"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="10px"
+                    android:src="@drawable/add" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

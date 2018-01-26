@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="112px"
+        android:background="@color/white">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/item_appointment_wash_right_img"
+                android:layout_width="82px"
+                android:layout_height="82px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="72px"
+                android:layout_marginLeft="130px"
+                android:layout_centerVertical="true">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/item_appointment_wash_right_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="T桖/短袖"
+                        android:textColor="@color/default_text"
+                        android:textSize="22px" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/item_appointemt_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/item_appointment_wash_right_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥50"
+                        android:textColor="@color/default_text"
+                        android:textSize="20px" />
+
+                    <TextView
+                        android:id="@+id/item_appointment_wash_right_vip_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="会员"
+                        android:layout_marginLeft="20px"
+                        android:textColor="@color/default_text"
+                        android:textSize="20px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12px"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/item_appointment_wash_right_subtract"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:src="@drawable/jian"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item_appointment_wash_right_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:textColor="@color/default_text"
+                    android:textSize="22px"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/item_appointment_wash_right_add"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginLeft="10px"
+                    android:src="@drawable/add" />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

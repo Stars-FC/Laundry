@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_navigation_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/them">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/head_layout_left"
+            android:layout_width="100px"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/title_img"
+                android:layout_width="26px"
+                android:layout_height="32px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="38px"
+                android:src="@drawable/dingwei" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <TextView
+            android:id="@+id/head_layout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <Button
+            android:id="@+id/head_layout_right"
+            android:layout_width="wrap_content"
+            android:layout_height="42px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22px"
+            android:background="@drawable/head_layout_button_bg"
+            android:padding="5px"
+            android:textColor="@color/white"
+            android:textSize="22px"
+            android:visibility="gone" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/commercial_fragment_store_head"
+            android:layout_width="match_parent"
+            android:layout_height="328px"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_big" />
+
+        <ImageView
+            android:id="@+id/commercial_fragment_store_logo"
+            android:layout_width="96px"
+            android:layout_height="96px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10px"
+            android:src="@drawable/add_smore" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32px"
+            android:layout_marginTop="28px">
+
+            <View
+                android:layout_width="5px"
+                android:layout_height="24px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/them" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:text="店铺名称:"
+                android:textColor="@color/default_text"
+                android:textSize="28px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="354px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6px">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/default_text" />
+
+                <EditText
+                    android:id="@+id/commercial_fragment_store_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="@null"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32px"
+            android:layout_marginTop="28px">
+
+            <View
+                android:layout_width="5px"
+                android:layout_height="24px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/them" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:text="开店时间:"
+                android:textColor="@color/default_text"
+                android:textSize="28px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="354px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6px">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/default_text" />
+
+                <TextView
+                    android:id="@+id/commercial_fragment_store_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:background="@null"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32px"
+            android:layout_marginTop="28px">
+
+            <View
+                android:layout_width="5px"
+                android:layout_height="24px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/them" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:text="联系方式:"
+                android:textColor="@color/default_text"
+                android:textSize="28px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="354px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6px">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/default_text" />
+
+                <EditText
+                    android:id="@+id/commercial_fragment_store_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32px"
+            android:layout_marginTop="28px">
+
+            <View
+                android:layout_width="5px"
+                android:layout_height="24px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/them" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:text="公司地址:"
+                android:textColor="@color/default_text"
+                android:textSize="28px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="354px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6px">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/default_text" />
+
+                <EditText
+                    android:id="@+id/commercial_fragment_store_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32px"
+            android:layout_marginTop="28px">
+
+            <View
+                android:layout_width="5px"
+                android:layout_height="24px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/them" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:text="店铺描述:"
+                android:textColor="@color/default_text"
+                android:textSize="28px" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="354px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6px">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/default_text" />
+
+                <EditText
+                    android:id="@+id/commercial_fragment_store_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="@null"
+                    android:textColor="@color/default_text"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <Button
+            android:id="@+id/commercial_fragment_store_save"
+            android:layout_width="244px"
+            android:layout_height="46px"
+            android:layout_marginTop="28px"
+            android:background="@drawable/circular_button"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="26px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>
