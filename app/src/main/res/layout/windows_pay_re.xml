@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="402px"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/windows_name"
+            android:layout_width="match_parent"
+            android:layout_height="62px"
+            android:background="@drawable/top_circular"
+            android:gravity="center"
+            android:text="会员卡充值"
+            android:textColor="@color/white"
+            android:textSize="22px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="310px"
+            android:background="@drawable/bottom_circular"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/windows_pay_way_ali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:gravity="center"
+                android:text="请输入充值金额"
+                android:textColor="@color/them"
+                android:textSize="20px" />
+
+            <EditText
+                android:id="@+id/windows_pay_password"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26px"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/default_text"
+                android:textSize="20px" />
+
+            <Button
+                android:id="@+id/windows_pay_way_confirm"
+                android:layout_width="128px"
+                android:layout_height="42px"
+                android:layout_marginTop="64px"
+                android:background="@drawable/circular_button"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="22px" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

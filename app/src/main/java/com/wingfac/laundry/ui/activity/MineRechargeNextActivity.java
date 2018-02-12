@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
@@ -103,12 +104,69 @@ public class MineRechargeNextActivity extends BaseActivity {
             money = "2000";
         });
         go.setOnClickListener(view -> {
-            if (money.equals("")) {
-                ToastUtils.showToast("请选择充值金额");
+//            if (money.equals("")) {
+//                ToastUtils.showToast("请选择充值金额");
+//                return;
+//            }
+            passwordWindow =null;
+            showPasswordWindow(contentLayout, R.layout.windows_pay_re);
+        });
+    }
+    PopupWindow passwordWindow;
+    private void showPasswordWindow(View parentView, int convertViewResource) {
+        //创建一个popUpWindow
+        View popLayout = LayoutInflater.from(getActivity()).inflate(convertViewResource, null);
+        EditText password = popLayout.findViewById(R.id.windows_pay_password);
+        popLayout.findViewById(R.id.windows_pay_way_confirm).setOnClickListener(view -> {
+            if (password.getText().toString().equals("")) {
+                ToastUtils.showToast("请输入充值金额");
                 return;
             }
-            showPopWindow(contentLayout, R.layout.windows_pay_way);
+            money = password.getText().toString();
+            if (passwordWindow.isShowing()) {
+                passwordWindow.dismiss();
+                passwordWindow = null;
+                showPopWindow(contentLayout, R.layout.windows_pay_way);
+            }
         });
+        if (passwordWindow == null) {
+            //实例化一个popupWindow
+            passwordWindow =
+                    new PopupWindow(popLayout, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            //产生背景变暗效果
+            WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+            lp.alpha = 0.4f;
+            getActivity().getWindow().setAttributes(lp);
+            //点击外面popupWindow消失
+            passwordWindow.setOutsideTouchable(true);
+            //popupWindow获取焦点
+            passwordWindow.setFocusable(true);
+            //popupWindow设置背景图
+            passwordWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));
+            //popupWindow设置开场动画风格
+            //popupWindow.setAnimationStyle(R.style.popupWindow_anim);
+            //刷新popupWindow
+            //popupWindow.update();
+
+            //设置popupWindow消失时的监听
+            passwordWindow.setOnDismissListener(() -> {
+                WindowManager.LayoutParams lp1 = getActivity().getWindow().getAttributes();
+                lp1.alpha = 1f;
+                getActivity().getWindow().setAttributes(lp1);
+            });
+            passwordWindow.showAtLocation(parentView, Gravity.CENTER, 0, 0);
+        } else {
+            //如果popupWindow正在显示，接下来隐藏
+            if (passwordWindow.isShowing()) {
+                passwordWindow.dismiss();
+            } else {
+                //产生背景变暗效果
+                WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+                lp.alpha = 0.4f;
+                getActivity().getWindow().setAttributes(lp);
+                passwordWindow.showAtLocation(parentView, Gravity.CENTER, 0, 0);
+            }
+        }
     }
 
     void getUser() {

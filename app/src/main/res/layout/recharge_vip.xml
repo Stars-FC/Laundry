@@ -58,7 +58,8 @@
         android:layout_width="match_parent"
         android:layout_height="66px"
         android:layout_below="@+id/cv_vip"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="5px"
@@ -102,14 +103,16 @@
         android:layout_height="1px"
         android:layout_below="@+id/ll_recharge500"
         android:layout_centerHorizontal="true"
-        android:background="#eeeeee" />
+        android:background="#eeeeee"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/ll_recharge1000"
         android:layout_width="match_parent"
         android:layout_height="66px"
         android:layout_below="@+id/view"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="5px"
@@ -153,14 +156,16 @@
         android:layout_height="1px"
         android:layout_below="@+id/ll_recharge1000"
         android:layout_centerHorizontal="true"
-        android:background="#eeeeee" />
+        android:background="#eeeeee"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/ll_recharge2000"
         android:layout_width="match_parent"
         android:layout_height="66px"
         android:layout_below="@+id/view1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="5px"
