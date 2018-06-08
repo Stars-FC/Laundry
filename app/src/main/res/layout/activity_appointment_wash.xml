@@ -17,6 +17,70 @@
 
     <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/main_left_two_level_title_line"
+                android:layout_width="130px"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#0081da"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/main_left_two_level_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:text="左边标题"
+                android:textColor="#333333"
+                android:textSize="34px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/main_right_two_level_title_line"
+                android:layout_width="130px"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#0081da"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/main_right_two_level_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:text="右边标题"
+                android:textColor="#333333"
+                android:textSize="34px" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eeeeee"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5">
 

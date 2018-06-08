@@ -204,6 +204,19 @@
         <meta-data
             android:name="JPUSH_APPKEY"
             android:value="586324011c65ac87541e18f5" />
+
+        <activity
+            android:name=".ui.activity.MineRecyclingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WithdrawSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RecoveryHistoryActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

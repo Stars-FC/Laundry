@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系电话"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="联系电话"
+            android:layout_marginLeft="20px"
+            android:textSize="30px"
+            android:background="@null"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:background="#eeeeee"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="衣服种类"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="填写衣服种类"
+            android:layout_marginLeft="20px"
+            android:textSize="30px"
+            android:background="@null"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:background="#eeeeee"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="83px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择地址"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="25px"
+            android:layout_height="15px"
+            android:src="@mipmap/more"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:background="#eeeeee"/>
+
+    <TextView
+        android:layout_marginTop="33px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传衣服图片"
+        android:layout_marginLeft="30px"
+        android:textSize="30px"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_width="142px"
+        android:layout_height="142px"
+        android:layout_marginTop="38px"
+        android:layout_marginLeft="30px"
+        android:src="@mipmap/addphoto"/>
+
+    <Button
+        android:layout_marginTop="150px"
+        android:layout_width="510px"
+        android:layout_height="75px"
+        android:text="提交资料"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_button_bule"
+        />
+</com.zhy.autolayout.AutoLinearLayout>

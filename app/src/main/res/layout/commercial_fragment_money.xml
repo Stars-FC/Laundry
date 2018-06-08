@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <include layout="@layout/head_layout" />
+    <include layout="@layout/head_layout_setting" />
 
     <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
@@ -54,5 +54,6 @@
         android:layout_marginBottom="102px"
         android:divider="#00000000"
         android:dividerHeight="0dp"
-        android:layout_marginTop="166px" />
+        android:layout_marginTop="166px">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
 </com.zhy.autolayout.AutoRelativeLayout>

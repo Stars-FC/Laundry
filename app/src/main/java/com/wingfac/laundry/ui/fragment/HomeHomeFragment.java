@@ -98,6 +98,8 @@ public class HomeHomeFragment extends Fragment implements AMapLocationListener {
     int height;
     //保存每个GridView的视图
     ArrayList<View> viewlist = null;
+    @Bind(R.id.head_layout_title)
+    TextView headLayoutTitle;
     private ImageView[] dots;
     /**
      * ViewPager页数
@@ -107,6 +109,7 @@ public class HomeHomeFragment extends Fragment implements AMapLocationListener {
     private int currentIndex;
     public AMapLocationClientOption mLocationOption = null;
     public AMapLocationClient mlocationClient;
+    private Boolean flag = true;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -117,7 +120,12 @@ public class HomeHomeFragment extends Fragment implements AMapLocationListener {
         height = wm.getDefaultDisplay().getHeight();
         //初始化视图
         initView();
+        initData();
         return view;
+    }
+
+    private void initData() {
+
     }
 
     @Override
@@ -182,16 +190,16 @@ public class HomeHomeFragment extends Fragment implements AMapLocationListener {
                     @Override
                     public void onNext(WashMessageBean value) {
                         if (value.responseStatus.equals("0")) {
-                           if(value.data.size()>0){
-                               washBottom.setVisibility(View.VISIBLE);
-                               washBottom.setOnClickListener(view -> {
-                                   Intent intent = new Intent(getActivity(), WashListActivity.class);
-                                   startActivity(intent);
-                               });
-                               messageText.setText("您有一个快递包裹至"+value.data.get(0).address+"，取件码【"+value.data.get(0).pickup_password+"】,请您尽快取件");
-                           }else {
-                               washBottom.setVisibility(View.GONE);
-                           }
+                            if (value.data.size() > 0) {
+                                washBottom.setVisibility(View.VISIBLE);
+                                washBottom.setOnClickListener(view -> {
+                                    Intent intent = new Intent(getActivity(), WashListActivity.class);
+                                    startActivity(intent);
+                                });
+                                messageText.setText("您有一个快递包裹至" + value.data.get(0).address + "，取件码【" + value.data.get(0).pickup_password + "】,请您尽快取件");
+                            } else {
+                                washBottom.setVisibility(View.GONE);
+                            }
                         }
                     }
 
@@ -493,5 +501,11 @@ public class HomeHomeFragment extends Fragment implements AMapLocationListener {
         dots[position].setBackgroundResource(R.drawable.home_dot);
         currentIndex = position;
 
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 }

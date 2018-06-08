@@ -103,6 +103,8 @@ public class MineRechargeNextActivity extends BaseActivity {
             oneCheck.setChecked(false);
             money = "2000";
         });
+
+        // TODO: 2018/6/7 -------------------***************************
         go.setOnClickListener(view -> {
 //            if (money.equals("")) {
 //                ToastUtils.showToast("请选择充值金额");
@@ -112,6 +114,7 @@ public class MineRechargeNextActivity extends BaseActivity {
             showPasswordWindow(contentLayout, R.layout.windows_pay_re);
         });
     }
+
     PopupWindow passwordWindow;
     private void showPasswordWindow(View parentView, int convertViewResource) {
         //创建一个popUpWindow
@@ -202,15 +205,17 @@ public class MineRechargeNextActivity extends BaseActivity {
                 });
     }
 
-    int state;
+    int state;  // 1：支付宝/2：微信
 
     private void showPopWindow(View parentView, int convertViewResource) {
         //创建一个popUpWindow
         View popLayout = LayoutInflater.from(getActivity()).inflate(convertViewResource, null);
-        TextView ali = popLayout.findViewById(R.id.windows_pay_way_ali);
-        TextView wei = popLayout.findViewById(R.id.windows_pay_way_wei);
+        TextView ali = popLayout.findViewById(R.id.windows_pay_way_ali); //支付宝
+        TextView wei = popLayout.findViewById(R.id.windows_pay_way_wei); //微信
         TextView vip = popLayout.findViewById(R.id.windows_pay_way_vip);
-        vip.setVisibility(View.GONE);
+
+        // TODO: 2018/6/7 -------------************* 
+        //vip.setVisibility(View.GONE);
         state = 0;
         ali.setOnClickListener(v -> {
             wei.setTextColor(getResources().getColor(R.color.default_text));
@@ -231,6 +236,8 @@ public class MineRechargeNextActivity extends BaseActivity {
             vip.setTextColor(getResources().getColor(R.color.them));
             state = 3;
         });
+
+        //确定
         popLayout.findViewById(R.id.windows_pay_way_confirm).setOnClickListener(view -> {
             if (state == 0) {
                 ToastUtils.showToast("请选择支付方式");
@@ -242,11 +249,15 @@ public class MineRechargeNextActivity extends BaseActivity {
                 switch (state) {
                     case 1:
                         LoadingDialog.showRoundProcessDialog(getActivity());
-                        pay("1");
+                        pay("1","");
                         break;
                     case 2:
                         LoadingDialog.showRoundProcessDialog(getActivity());
-                        pay("0");
+                        pay("0","");
+                        break;
+                    case 3:
+                        // TODO: 2018/6/7  跳转到卡密支付（第二个参数为卡号）
+                        pay("2","");
                         break;
                 }
             }
@@ -323,7 +334,9 @@ public class MineRechargeNextActivity extends BaseActivity {
         ;
     };
 
-    void pay(String typeStr) {
+
+   /*
+   void pay(String typeStr) {
         APPApi.getInstance().service
                 .payWallet(UserBean.user.id, money, typeStr, "1")
                 .subscribeOn(Schedulers.io())               //在IO线程进行网络请求
@@ -362,6 +375,67 @@ public class MineRechargeNextActivity extends BaseActivity {
                                 payReq.timeStamp = value.data.timestamp;
                                 payReq.sign = value.data.sign;
                                 api.sendReq(payReq);
+                            }
+                            getUser();
+                        } else {
+                            Toast.makeText(getActivity(), value.msg, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LoadingDialog.mDialog.dismiss();
+                        Toast.makeText(getActivity(), "请检查您的网络设置", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onComplete() {
+                    }
+                });
+    } */
+
+    // TODO: 2018/6/7 ----------********** 用户充值修改（卡密支付页面没有）
+    void pay(String typeStr,String cardNumber) {
+        APPApi.getInstance().service
+                .payWallet1(UserBean.user.id, money, typeStr, "1",cardNumber)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<PayBean>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onNext(PayBean value) {
+                        LoadingDialog.mDialog.dismiss();
+                        if (value.responseStatus.equals("0")) {
+                            if (typeStr.equals("1")) {
+                                Runnable payRunnable = () -> {
+                                    PayTask alipay = new PayTask(getActivity());
+                                    Map<String, String> result = alipay.payV2(value.data.alSign, true);
+                                    Log.i("msp", result.toString());
+                                    Message msg = new Message();
+                                    msg.what = SDK_PAY_FLAG;
+                                    msg.obj = result;
+                                    mHandler.sendMessage(msg);
+                                };
+
+                                Thread payThread = new Thread(payRunnable);
+                                payThread.start();
+                            } else if(typeStr.equals("0")){
+                                IWXAPI api = WXAPIFactory.createWXAPI(getActivity(), value.data.appid);
+                                api.registerApp(value.data.appid);
+                                PayReq payReq = new PayReq();
+                                payReq.appId = value.data.appid;
+                                payReq.partnerId = value.data.partnerid;
+                                payReq.prepayId = value.data.prepayid;
+                                payReq.packageValue = value.data.packageValue;
+                                payReq.nonceStr = value.data.noncestr;
+                                payReq.timeStamp = value.data.timestamp;
+                                payReq.sign = value.data.sign;
+                                api.sendReq(payReq);
+                            }else if(typeStr.equals("2")){
+                                // TODO: 2018/6/7 -------------***********卡密支付 
                             }
                             getUser();
                         } else {

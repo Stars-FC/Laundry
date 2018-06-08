@@ -7,6 +7,15 @@
 
     <include layout="@layout/head_layout" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/fragment_mine_user"
         android:layout_width="match_parent"
@@ -190,6 +199,74 @@
         android:background="@color/border" />
 
     <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@mipmap/lishi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="历史订单"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@mipmap/dianpu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="我的店铺"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/fragment_mine_complaint"
         android:layout_width="match_parent"
         android:layout_height="88px"
@@ -206,6 +283,41 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="80px"
             android:text="投诉建议"
+            android:textColor="@color/gray_text"
+            android:textSize="26px" />
+
+
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22px"
+            android:src="@drawable/more" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="22px"
+        android:background="@color/border" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/fragment_mine_old_clothes_recycling"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:layout_marginLeft="32px"
+            android:src="@mipmap/huishou" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:text="旧衣回收"
             android:textColor="@color/gray_text"
             android:textSize="26px" />
 
@@ -275,7 +387,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80px"
-            android:text="退出当前帐号"
+            android:text="退出程序"
             android:textColor="@color/gray_text"
             android:textSize="26px" />
 
@@ -293,4 +405,7 @@
         android:layout_height="1px"
         android:layout_marginLeft="22px"
         android:background="@color/border" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
 </com.zhy.autolayout.AutoLinearLayout>

@@ -39,7 +39,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Administrator on 2017/8/3 0003.
  */
 
-public class ShopHomeActivity extends BaseActivity {
+public class ShopHomeActivity extends BaseActivity implements View.OnClickListener{
     @Bind(R.id.head_layout_left)
     RelativeLayout left;
     @Bind(R.id.head_layout_title)
@@ -65,6 +65,16 @@ public class ShopHomeActivity extends BaseActivity {
     public Map<Integer, CommodityBean> rightData = new HashMap<>();
     private int s_id = -1;
 
+    @Bind(R.id.main_left_two_level_title_line)
+    View mainLeftTwoLevelTitleLine;
+    @Bind(R.id.main_left_two_level_title)
+    Button mainLeftTwoLevelTitle;
+    @Bind(R.id.main_right_two_level_title_line)
+    View mainRightTwoLevelTitleLine;
+    @Bind(R.id.main_right_two_level_title)
+    Button mainRightTwoLevelTitle;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +82,7 @@ public class ShopHomeActivity extends BaseActivity {
         ButterKnife.bind(this);
         s_id = getIntent().getIntExtra("s_id", -1);
         initData();
+        bindEvent();
     }
 
     void initData() {
@@ -157,6 +168,14 @@ public class ShopHomeActivity extends BaseActivity {
             intent.putExtra("s_id", String.valueOf(s_id));
             startActivity(intent);
         });
+
+
+        mainLeftTwoLevelTitle.setText("" + getResources().getString(R.string.group_buy));
+        mainRightTwoLevelTitle.setText("" + getResources().getString(R.string.takeaway));
+        mainLeftTwoLevelTitle.setOnClickListener(this);
+        mainRightTwoLevelTitle.setOnClickListener(this);
+
+
     }
 
     void getDate() {
@@ -271,5 +290,23 @@ public class ShopHomeActivity extends BaseActivity {
                     });
         }
 
+    }
+
+    private void bindEvent() {
+        mainLeftTwoLevelTitle.setOnClickListener(this);
+        mainRightTwoLevelTitleLine.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == mainLeftTwoLevelTitle) {
+            mainLeftTwoLevelTitleLine.setVisibility(View.VISIBLE);
+            mainRightTwoLevelTitleLine.setVisibility(View.INVISIBLE);
+        } else if (view == mainRightTwoLevelTitle) {
+            mainRightTwoLevelTitleLine.setVisibility(View.VISIBLE);
+            mainLeftTwoLevelTitleLine.setVisibility(View.INVISIBLE);
+        }else {
+
+        }
     }
 }

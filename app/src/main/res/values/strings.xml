@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">快寄划</string>
     <string name="planet_prompt">请选择分类</string>
+    <string name="group_buy">团购</string>
+    <string name="takeaway">外卖</string>
 </resources>

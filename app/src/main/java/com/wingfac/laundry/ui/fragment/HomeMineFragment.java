@@ -19,6 +19,7 @@ import com.wingfac.laundry.ui.activity.MineAddressActivity;
 import com.wingfac.laundry.ui.activity.MineCartActivity;
 import com.wingfac.laundry.ui.activity.MineComplaintSuggestionActivity;
 import com.wingfac.laundry.ui.activity.MineRechargeActivity;
+import com.wingfac.laundry.ui.activity.MineRecyclingActivity;
 import com.wingfac.laundry.ui.activity.MineUserActivity;
 import com.wingfac.laundry.weight.CircleImageView;
 
@@ -56,7 +57,8 @@ public class HomeMineFragment extends Fragment {
     TextView title;
     @Bind(R.id.fragment_mine_call_me)
     RelativeLayout callMe;
-
+    @Bind(R.id.fragment_mine_old_clothes_recycling)
+    RelativeLayout recycling;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mine, null, false);
@@ -114,6 +116,10 @@ public class HomeMineFragment extends Fragment {
         callMe.setOnClickListener(view -> {
             intent = new Intent(getActivity(), MineComplaintSuggestionActivity.class);
             intent.putExtra("state","2");
+            startActivity(intent);
+        });
+        recycling.setOnClickListener(view -> {//旧衣回收
+            intent = new Intent(getActivity(), MineRecyclingActivity.class);
             startActivity(intent);
         });
     }

@@ -134,7 +134,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 } else if (!passwordAgain.getText().toString().equals(passWord.getText().toString())) {
                     ToastUtils.showToast("两次密码不一致");
                     return;
-                } else if (!payPassword.getText().toString().equals("")) {
+                } else if (payPassword.getText().toString().equals("")) {
                     ToastUtils.showToast("请输入支付密码");
                     return;
                 }

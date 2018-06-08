@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_quick_plan"
+            android:layout_width="140px"
+            android:layout_height="140px"
+            android:src="@mipmap/kuaijihua"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收款方:收款平台"
+            android:textSize="30px"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_quick_plan"
+            android:layout_marginTop="30px"/>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="付款金额"
+        android:textSize="25px"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="27px"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="27px">
+
+        <ImageView
+            android:layout_width="32px"
+            android:layout_height="40px"
+            android:src="@mipmap/qian"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:background="@null"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="27px"
+        android:layout_marginTop="30px"
+        android:background="#eeeeee"/>
+
+    <Button
+        android:layout_marginTop="120px"
+        android:layout_width="445px"
+        android:layout_height="53px"
+        android:layout_gravity="center_horizontal"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_button"
+        />
+
+</com.zhy.autolayout.AutoLinearLayout>

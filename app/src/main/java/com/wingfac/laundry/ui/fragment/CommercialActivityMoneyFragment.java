@@ -1,11 +1,13 @@
 package com.wingfac.laundry.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,6 +19,7 @@ import com.wingfac.laundry.R;
 import com.wingfac.laundry.api.APPApi;
 import com.wingfac.laundry.bean.CommercialMoneyBean;
 import com.wingfac.laundry.bean.UserBean;
+import com.wingfac.laundry.ui.activity.WithdrawSettingActivity;
 import com.wingfac.laundry.ui.adapter.CommercialMoneyAdapter;
 import com.wingfac.laundry.utiil.TimeUtils;
 import com.wingfac.laundry.weight.CustomDatePickerNo;
@@ -43,6 +46,8 @@ public class CommercialActivityMoneyFragment extends Fragment implements View.On
     RelativeLayout returnLayout;
     @Bind(R.id.head_layout_title)
     TextView title;
+    @Bind(R.id.head_layout_right)
+    ImageView rightSetting;
     @Bind(R.id.commercial_fragment_order_list)
     PullToRefreshListView listView;
     @Bind(R.id.commercial_fragment_order_start)
@@ -70,8 +75,17 @@ public class CommercialActivityMoneyFragment extends Fragment implements View.On
     void initData() {
         returnLayout.setVisibility(View.GONE);
         title.setText("财务管理");
+        rightSetting.setImageResource(R.mipmap.shezhi);
+        rightSetting.setVisibility(View.VISIBLE);
         start.setOnClickListener(this);
         end.setOnClickListener(this);
+        rightSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WithdrawSettingActivity.class);
+                startActivity(intent);
+            }
+        });
         listView.setMode(PullToRefreshBase.Mode.DISABLED);
         listView.getLoadingLayoutProxy(false, true).setPullLabel("上拉加载");
         listView.getLoadingLayoutProxy(false, true).setRefreshingLabel("加载中");

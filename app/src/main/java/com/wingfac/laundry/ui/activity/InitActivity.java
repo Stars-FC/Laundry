@@ -143,9 +143,9 @@ public class InitActivity extends AppCompatActivity implements AMapLocationListe
                             UserBean.user = value.obj;
                             UserBean.userStore = value.obj1;
                             if (value.obj.type == 1) {
-                                intent = new Intent(InitActivity.this, MainActivity.class);
-                            } else {
                                 intent = new Intent(InitActivity.this, MainMerchantActivity.class);
+                            } else {
+                                intent = new Intent(InitActivity.this, MainActivity.class);
                             }
                             startActivity(intent);
                             finish();

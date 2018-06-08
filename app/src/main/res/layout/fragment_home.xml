@@ -18,6 +18,13 @@
             android:layout_marginLeft="20px"
             android:src="@drawable/white_location" />
 
+        <ImageView
+            android:layout_width="41px"
+            android:layout_height="41px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="87px"
+            android:src="@mipmap/saoyisao"/>
+
         <TextView
             android:id="@+id/head_layout_title"
             android:layout_width="wrap_content"

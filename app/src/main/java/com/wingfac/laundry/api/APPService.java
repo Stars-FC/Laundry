@@ -1,6 +1,8 @@
 package com.wingfac.laundry.api;
 
 
+import com.wingfac.laundry.FC.SetStoreBean;
+import com.wingfac.laundry.FC.StoreOpenBean;
 import com.wingfac.laundry.bean.AddressBean;
 import com.wingfac.laundry.bean.AppointmentConfirmOrderBean;
 import com.wingfac.laundry.bean.CanCloseBean;
@@ -337,6 +339,7 @@ public interface APPService {
     @POST("LaundryMall/Store_Order/payStoreOrder.action")
     Observable<PayBean> payStore(@Field("soId") String soId, @Field("auId") String auId, @Field("payType") String payType, @Field("fromType") String fromType);
 
+
     @FormUrlEncoded
     @POST("LaundryMall/Balance_Order_Controller/addUserBalance.action")
     Observable<PayBean> payWallet(@Field("uId") String uId, @Field("balance") String balance, @Field("payType") String payType, @Field("fromType") String fromType);
@@ -366,4 +369,21 @@ public interface APPService {
     Observable<Base> tiXian(@Field("uId") String uId,@Field("out_total_price") String out_total_price,@Field("payee_account") String payee_account
             ,@Field("pay_type") String pay_type
             ,@Field("payee_type") String payee_type);
+
+    /*----------------------------------------------------------------------------------------*/
+    @FormUrlEncoded
+    @POST("LaundryMall/Store_Mobile/storeOpenState.action")
+    Observable<StoreOpenBean> storeOpenState(@Field("s_id") String s_id); //商户营业状态
+
+    @FormUrlEncoded
+    @POST("LaundryMall/Store_Mobile/openClose.action")
+    Observable<SetStoreBean> setOpenClose(@Field("s_id") String s_id, @Field("open_state") String open_state);  //商店打烊/营业
+
+    // TODO: 2018/6/7 ----------********** 用户充值修改
+    @FormUrlEncoded
+    @POST("LaundryMall/Balance_Order_Controller/addUserBalance.action")
+    Observable<PayBean> payWallet1(@Field("uId") String uId, @Field("balance") String balance,
+                                   @Field("payType") String payType, @Field("fromType") String fromType,
+                                   @Field("cardNumber") String cardNumber);
+
 }

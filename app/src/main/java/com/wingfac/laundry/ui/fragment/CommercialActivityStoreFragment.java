@@ -6,8 +6,10 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +23,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.wingfac.laundry.FC.SetStoreBean;
+import com.wingfac.laundry.FC.StoreOpenBean;
 import com.wingfac.laundry.R;
 import com.wingfac.laundry.api.APPApi;
 import com.wingfac.laundry.app.MyApplication;
@@ -57,6 +61,12 @@ import okhttp3.RequestBody;
  */
 
 public class CommercialActivityStoreFragment extends Fragment implements View.OnClickListener {
+
+    // TODO: 2018/6/6  -------------------------------------
+    private  static String typeStore="0";  //设置默认的商户营业状态
+
+
+
     public static final String TAG = "CommercialActivityStoreFragment";
     protected static final int REQUEST_CODE_CAMERA = 2;
     protected static final int REQUEST_CODE_LOCAL = 3;
@@ -85,11 +95,16 @@ public class CommercialActivityStoreFragment extends Fragment implements View.On
     LinearLayout contentLayout;
     @Bind(R.id.commercial_fragment_store_save)
     Button save;
+    @Bind(R.id.title_img)
+    ImageView titleImg;
+    @Bind(R.id.iv_business_status)
+    ImageView ivBusinessStatus;
     private CustomDatePickerNo customDatePicker;
     private SelectPicPopupWindow menuWindow;
     private String headPath = "";
     private String logoPath = "";
     private Boolean state = false;
+    private Boolean flag = true;
 
     /**
      * check if sdcard exist
@@ -97,7 +112,7 @@ public class CommercialActivityStoreFragment extends Fragment implements View.On
      * @return
      */
     public static boolean isSdcardExist() {
-        return android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     @Override
@@ -119,8 +134,12 @@ public class CommercialActivityStoreFragment extends Fragment implements View.On
         title.setText("店铺信息");
         right.setText("店铺首页");
         right.setVisibility(View.VISIBLE);
+
+        // TODO: 2018/6/6  -------------------------------------
+        storeOpenState();
+
         right.setOnClickListener(view -> {
-            if(UserBean.userStore==null){
+            if (UserBean.userStore == null) {
                 ToastUtils.showToast("您还未创建店铺");
                 return;
             }
@@ -146,6 +165,22 @@ public class CommercialActivityStoreFragment extends Fragment implements View.On
             address.setText(UserBean.userStore.s_address);
             describe.setText(UserBean.userStore.describe);
         }
+
+        // TODO: 2018/6/6  -------------------------------------
+        ivBusinessStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(flag){
+                    flag = false;
+                    ivBusinessStatus.setImageResource(R.mipmap.close);
+                    setOpenClose();
+                }else {
+                    flag = true;
+                    ivBusinessStatus.setImageResource(R.mipmap.atworktwo);
+                    setOpenClose();
+                }
+            }
+        });
     }
 
     @Override
@@ -218,8 +253,8 @@ public class CommercialActivityStoreFragment extends Fragment implements View.On
     void login(String phone, String password) {
         APPApi.getInstance().service
                 .login(phone, password)
-                .subscribeOn(Schedulers.io())               //在IO线程进行网络请求
-                .observeOn(AndroidSchedulers.mainThread())  //回到主线程去处理请求结果
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<UserBean>() {
                     @Override
                     public void onSubscribe(Disposable d) {
@@ -366,7 +401,7 @@ public class CommercialActivityStoreFragment extends Fragment implements View.On
             intent.setType("image/*");
 
         } else {
-            intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         }
         startActivityForResult(intent, REQUEST_CODE_LOCAL);
     }
@@ -488,5 +523,86 @@ public class CommercialActivityStoreFragment extends Fragment implements View.On
         //显示窗口
         menuWindow.showAtLocation(contentLayout, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0); //设置layout在PopupWindow中显示的位置
         //为弹出窗口实现监听类
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
+    }
+
+    // TODO: 2018/6/6  -------------------------------------
+
+    /**
+     * 查询商户营业状态
+     */
+    public void storeOpenState() {
+        APPApi.getInstance().service
+                .storeOpenState(UserBean.userStore.s_id+"")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<StoreOpenBean>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onNext(StoreOpenBean value) {
+                       //根据获取到的值
+                        if ("1".equals(value.getOpen_state())){
+                            ivBusinessStatus.setImageResource(R.mipmap.close);
+                            typeStore="0";
+                            flag=false;
+
+                        }else if("0".equals(value.getOpen_state())){
+                            ivBusinessStatus.setImageResource(R.mipmap.atworktwo);
+                            typeStore="1";
+                            flag=true;
+
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        ToastUtils.showToast("请检查您的网络设置");
+                    }
+
+                    @Override
+                    public void onComplete() {
+                    }
+                });
+    }
+
+    /**
+     * 改变商店打烊/营业
+     */
+    public void setOpenClose() {
+        APPApi.getInstance().service
+                .setOpenClose(UserBean.userStore.s_id+"",typeStore)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<SetStoreBean>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onNext(SetStoreBean value) {
+                        if ("1".equals(value.getOpen_state())){
+                            typeStore="0";
+                        }else if("0".equals(value.getOpen_state())){
+                            typeStore="1";
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        ToastUtils.showToast("请检查您的网络设置");
+                    }
+
+                    @Override
+                    public void onComplete() {
+                    }
+                });
     }
 }

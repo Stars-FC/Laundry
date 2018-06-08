@@ -24,7 +24,19 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="38px"
                 android:src="@drawable/dingwei" />
+
         </com.zhy.autolayout.AutoRelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_business_status"
+            android:layout_width="110px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100px"
+            android:gravity="center_vertical"
+            android:paddingLeft="5px"
+            android:src="@mipmap/atworktwo"
+            android:text="上班中" />
 
         <TextView
             android:id="@+id/head_layout_title"
@@ -36,16 +48,24 @@
 
         <Button
             android:id="@+id/head_layout_right"
-            android:layout_width="wrap_content"
-            android:layout_height="42px"
+            android:layout_width="110px"
+            android:layout_height="35px"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="22px"
             android:background="@drawable/head_layout_button_bg"
             android:padding="5px"
             android:textColor="@color/white"
-            android:textSize="22px"
+            android:textSize="20px"
             android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/saoyisao"
+            android:layout_marginRight="30px"
+            android:layout_toLeftOf="@id/head_layout_right"/>
     </com.zhy.autolayout.AutoRelativeLayout>
 
     <com.zhy.autolayout.AutoLinearLayout

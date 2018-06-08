@@ -6,28 +6,26 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.wingfac.laundry.R;
 import com.wingfac.laundry.api.APPApi;
 import com.wingfac.laundry.app.MyApplication;
-import com.wingfac.laundry.bean.CommodityBean;
 import com.wingfac.laundry.bean.StoreClassBean;
 import com.wingfac.laundry.bean.UserBean;
 import com.wingfac.laundry.bean.base.Base;
-import com.wingfac.laundry.bean.base.Constant;
 import com.wingfac.laundry.ui.activity.base.BaseActivity;
 import com.wingfac.laundry.ui.adapter.StoreAddAdapter;
-import com.wingfac.laundry.weight.ListViewForScrollView;
 import com.wingfac.laundry.weight.LoadingDialog;
 import com.wingfac.laundry.weight.SelectPicPopupWindow;
 import com.yuyh.library.utils.toast.ToastUtils;
@@ -49,7 +47,7 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
 
-public class CommercialAcitivityStoreHomeActivity extends BaseActivity implements StoreAddAdapter.CallBack {
+public class CommercialAcitivityStoreHomeActivity extends BaseActivity implements StoreAddAdapter.CallBack,View.OnClickListener{
     @Bind(R.id.head_layout_left)
     RelativeLayout left;
     @Bind(R.id.head_layout_title)
@@ -57,11 +55,25 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
     @Bind(R.id.head_layout_right)
     Button right;
     @Bind(R.id.banner)
-    ImageView banner;
-    @Bind(R.id.lv_storeAdd_list)
-    ListViewForScrollView mList;
-    @Bind(R.id.ll_storeAdd)
+//    ImageView banner;
+//    @Bind(R.id.lv_storeAdd_list)
+//    ListViewForScrollView mList;
+//    @Bind(R.id.ll_storeAdd)
     ImageView mLinearLayout;
+    @Bind(R.id.title_img)
+    ImageView titleImg;
+    @Bind(R.id.main_left_two_level_title_line)
+    View mainLeftTwoLevelTitleLine;
+    @Bind(R.id.main_left_two_level_title)
+    Button mainLeftTwoLevelTitle;
+    @Bind(R.id.main_right_two_level_title_line)
+    View mainRightTwoLevelTitleLine;
+    @Bind(R.id.main_right_two_level_title)
+    Button mainRightTwoLevelTitle;
+    @Bind(R.id.activity_appointment_wash_left_list)
+    ListView activityAppointmentWashLeftList;
+    @Bind(R.id.activity_appointment_wash_right_list)
+    ListView activityAppointmentWashRightList;
     private StoreClassBean mData = new StoreClassBean();
     private StoreAddAdapter storeAddAdapter;
     private String headPath = "";
@@ -78,7 +90,7 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
      * @return
      */
     public static boolean isSdcardExist() {
-        return android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     @Override
@@ -87,6 +99,7 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
         setContentView(R.layout.activity_dian_pu_shou_ye);
         ButterKnife.bind(this);
         initData();
+        bindEvent();
     }
 
     int select;
@@ -94,10 +107,10 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
     List<StoreClassBean.StoreClass> list = new ArrayList<StoreClassBean.StoreClass>();
 
     void initData() {
-        banner.setOnClickListener(view -> {
-            state = true;
-            showPopupWindow();
-        });
+//        banner.setOnClickListener(view -> {
+//            state = true;
+//            showPopupWindow();
+//        });
         right.setText("保存");
         right.setVisibility(View.VISIBLE);
         right.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +135,7 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
         title.setText("店铺首页");
         left.setOnClickListener(view -> finish());
         storeAddAdapter = new StoreAddAdapter(CommercialAcitivityStoreHomeActivity.this, mData, this);
-        mList.setAdapter(storeAddAdapter);
+//        mList.setAdapter(storeAddAdapter);
         mLinearLayout.setOnClickListener(view -> {
             if (mData.obj1.size() >= 20) {
                 ToastUtils.showToast("最多添加二十个分类");
@@ -132,6 +145,11 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
             storeAddAdapter.notifyDataSetChanged();
         });
         getHomeCommodity();
+
+        mainLeftTwoLevelTitle.setText("" + getResources().getString(R.string.group_buy));
+        mainRightTwoLevelTitle.setText("" + getResources().getString(R.string.takeaway));
+        mainLeftTwoLevelTitle.setOnClickListener(this);
+        mainRightTwoLevelTitle.setOnClickListener(this);
     }
 
     void alertClass(int i) {
@@ -193,19 +211,19 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
                     public void onNext(StoreClassBean value) {
                         mData.obj1.clear();
                         mData.obj1.addAll(value.obj1);
-                        for (int i = 0;i<mData.obj1.size();i++){
-                            if(mData.obj1.get(i).cc_picture.equals(" ")){
+                        for (int i = 0; i < mData.obj1.size(); i++) {
+                            if (mData.obj1.get(i).cc_picture.equals(" ")) {
                                 mData.obj1.get(i).cc_picture = "";
                             }
-                            if(mData.obj1.get(i).cc_name.equals(" ")){
+                            if (mData.obj1.get(i).cc_name.equals(" ")) {
                                 mData.obj1.get(i).cc_name = "";
                             }
                         }
-                        Glide.with(getActivity())
-                                .load(Constant.BASE_IMG + value.obj)
-                                .dontAnimate()
-                                .placeholder(R.drawable.add_big)
-                                .into(banner);
+//                        Glide.with(getActivity())
+//                                .load(Constant.BASE_IMG + value.obj)
+//                                .dontAnimate()
+//                                .placeholder(R.drawable.add_big)
+//                                .into(banner);
                         storeAddAdapter.notifyDataSetChanged();
                     }
 
@@ -253,7 +271,7 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
             intent.setType("image/*");
 
         } else {
-            intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         }
         startActivityForResult(intent, REQUEST_CODE_LOCAL);
     }
@@ -374,11 +392,11 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
                     @Override
                     public void onNext(Base value) {
                         LoadingDialog.mDialog.dismiss();
-                        Glide.with(getActivity())
-                                .load(headPath)
-                                .dontAnimate()
-                                .placeholder(R.drawable.add_big)
-                                .into(banner);
+//                        Glide.with(getActivity())
+//                                .load(headPath)
+//                                .dontAnimate()
+//                                .placeholder(R.drawable.add_big)
+//                                .into(banner);
                         Toast.makeText(getActivity(), value.msg, Toast.LENGTH_SHORT).show();
                     }
 
@@ -392,5 +410,23 @@ public class CommercialAcitivityStoreHomeActivity extends BaseActivity implement
                     public void onComplete() {
                     }
                 });
+    }
+
+    private void bindEvent() {
+        mainLeftTwoLevelTitle.setOnClickListener(this);
+        mainRightTwoLevelTitleLine.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == mainLeftTwoLevelTitle) {
+            mainLeftTwoLevelTitleLine.setVisibility(View.VISIBLE);
+            mainRightTwoLevelTitleLine.setVisibility(View.INVISIBLE);
+        } else if (view == mainRightTwoLevelTitle) {
+            mainRightTwoLevelTitleLine.setVisibility(View.VISIBLE);
+            mainLeftTwoLevelTitleLine.setVisibility(View.INVISIBLE);
+        }else {
+
+        }
     }
 }

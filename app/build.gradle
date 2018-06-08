@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'me.tatarka.retrolambda'
 android {
     signingConfigs {
         config {
             keyAlias 'key0'
             keyPassword '123456'
-            storeFile file('G:/Laundry/app/key/LaundryKey.jks')
+            storeFile file('LaundryKey.jks')
             storePassword '123456'
         }
     }
@@ -16,8 +16,9 @@ android {
         abortOnError false
     }
     compileSdkVersion 26
-    buildToolsVersion "25.0.3"
+    buildToolsVersion "26.0.2"
     defaultConfig {
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
         applicationId "com.wingfac.laundry"
         minSdkVersion 19
         targetSdkVersion 26
